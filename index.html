@@ -17,14 +17,22 @@
     --accent:#7cd3ff;
   }
 
-  html,body{
-    margin:0;
-    height:100%;
-    background:radial-gradient(circle at top, #101b2b 0%, #0a111c 45%, #05070b 75%, #020308 100%);
-    color:var(--text-main);
-    font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-    overflow-x:hidden;
-  }
+  html{
+  margin:0;
+  height:100%;
+}
+
+  body{
+  margin:0;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  background:radial-gradient(circle at top, #101b2b 0%, #0a111c 45%, #05070b 75%, #020308 100%);
+  color:var(--text-main);
+  font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  overflow-x:hidden;
+}
+
 
   /* ----- HEADER ----- */
   .header-wrap {
@@ -121,17 +129,18 @@
   }
 
   /* ----- MAIN LAYOUT ----- */
-  .app{
-    display:grid;
-    grid-template-columns:minmax(0, 360px) minmax(0, 420px) minmax(0, 360px);
-    gap:24px;
-    align-items:flex-start;
-    padding:16px 24px 24px;
-    max-width:1200px;
-    width:100%;
-    margin:0 auto;
-    box-sizing:border-box;
-  }
+ .app{
+   flex:1; 
+  display:grid;
+  grid-template-columns: minmax(300px, 340px) minmax(520px, 1fr) minmax(300px, 340px);
+  gap:24px;
+  align-items:flex-start;
+  padding:16px 24px 24px;
+  max-width:1400px;  /* increased from 1200px → gives room */
+  width:100%;
+  margin:0 auto;
+  box-sizing:border-box;
+}
 
   .col{ min-width:0; }
 
