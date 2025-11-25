@@ -778,9 +778,9 @@ async function requestFeedback(){
   feedbackBox.textContent = 'Scoring session…';
   const payload = {
     sessionId: SESSION_ID,
-    persona: getPersonaKey(),
-    score: true,      // for {{ $json.score }} routing
-    mode: 'score'
+    persona: 'score',   // <-- make sure your Switch has a branch for this
+    mode: 'score',
+    text: 'Please score the current session and return feedback.'  // <-- NEW
   };
   const data = await callN8N(payload);
   const fb = data.feedback || data.reply || data.message || '(no feedback returned)';
