@@ -683,7 +683,11 @@ function getPersonaKey(){
   const idx = personaSelect.selectedIndex;
   if (idx === 0) return 'persona1';
   if (idx === 1) return 'persona2';
-  return 'persona3';
+  if (idx === 2) return 'persona3';
+  if (idx === 3) return 'persona4';
+  if (idx === 4) return 'persona5';
+  if (idx === 5) return 'persona6';
+  return 'persona1';
 }
 function getPersonaShort(){
   const opt = personaSelect.options[personaSelect.selectedIndex];
